@@ -51,7 +51,7 @@ resource "aws_instance" "flask_app" {
     connection {
       type        = "ssh"
       user        = "ec2-user"
-      private_key = file("~/.ssh/MikeKey.pem")
+      private_key = file("~/.ssh/MikeKey")
       host        = self.public_ip
     }
   }
@@ -64,7 +64,7 @@ resource "aws_instance" "flask_app" {
     connection {
       type        = "ssh"
       user        = "ec2-user"
-      private_key = file("~/.ssh/MikeKey.pem")
+      private_key = file("~/.ssh/MikeKey")
       host        = self.public_ip
     }
   }
