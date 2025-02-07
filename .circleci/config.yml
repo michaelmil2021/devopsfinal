@@ -45,7 +45,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: Build Docker Image
-          command: docker build -t $DOCKERHUB_USERNAME/flask-app:latest .
+          command: docker build -t michaelmil2021/flask-app:latest .
       - run:
           name: Log in to Docker Hub
           command: echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
