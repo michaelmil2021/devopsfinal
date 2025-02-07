@@ -31,7 +31,7 @@ resource "aws_security_group" "flask_app_sg" {
 resource "aws_instance" "flask_app" {
   ami             = "ami-0c55b159cbfafe1f0" # Amazon Linux 2023 AMI
   instance_type   = "t2.micro"
-  key_name        = "my-key"
+  key_name        = "MikeKey.pem"
   security_groups = [aws_security_group.flask_app_sg.name]
 
   tags = {
