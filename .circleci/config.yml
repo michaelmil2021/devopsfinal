@@ -8,7 +8,7 @@ executors:
 
   docker-executor:
     docker:
-      - image: circleci/docker:latest
+      - image: cimg/base:stable
     working_directory: ~/project
 
   terraform-executor:
@@ -18,7 +18,7 @@ executors:
 
   ansible-executor:
     docker:
-      - image: williamyeh/ansible:latest
+      - image: demisto/ansible-runner:1.0.0.2084661
     working_directory: ~/project
 
 jobs:
